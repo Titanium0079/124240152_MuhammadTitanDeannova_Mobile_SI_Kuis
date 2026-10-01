@@ -1,16 +1,26 @@
 import 'package:flutter/material.dart';
 
+import 'main_screen.dart';
+
 void main() {
-  runApp(const MainApp());
+  runApp(const RestoApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class RestoApp extends StatelessWidget {
+  const RestoApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+    return MaterialApp(
+      title: ' Kuis Alat Tulis 124240152',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.red, // Warna utama aplikasi
+        scaffoldBackgroundColor:
+            Colors.grey[100], // Warna dasar latar belakang seluruh layar
+      ),
+      // Menentukan layar pertama yang akan dibuka saat aplikasi dinyalakan
+      home: const MainScreen(),
     );
   }
 }
